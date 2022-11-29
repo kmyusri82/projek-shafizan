@@ -1,0 +1,1 @@
+CREATE TABLE `usermanagement`.`user` ( `numberplate` VARCHAR(10) NOT NULL , `ownername` VARCHAR(50) NOT NULL , `carmodel` VARCHAR(40) NOT NULL , `car color` TEXT NOT NULL , PRIMARY KEY (`numberplate`)) ENGINE = InnoDB;

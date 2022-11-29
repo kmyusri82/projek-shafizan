@@ -1,0 +1,35 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View User</li>
+  </ol>
+  <h2 >Record History </h2>
+  <form class="d-flex" method="POST" action="/viewuser/:numberplate" novalidate>
+                    <input class="form-control me-2" type="search" placeholder="Search" name="search2" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                    
+  </form>
+</nav>
+<div class="view-user p-5">
+<table class="table table-bordered"  >
+  <thead>
+    <tr>
+      <th scope="col"><i class="bi bi-circle-fill"></i>  Number Plate</th>
+      <th scope="col"><i class="bi bi-clock-fill"></i>  In Time</th>
+      <th scope="col"><i class="bi bi-clock-fill"></i>  Out Time</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.numberplate}}</th>
+      <td>{{this.intime}}</td>
+      <td>{{this.outtime}}</td>
+    </tr>
+    {{/each }}
+
+  </tbody>
+</table>
+</div>

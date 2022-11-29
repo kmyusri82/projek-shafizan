@@ -1,0 +1,52 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">New User</li>
+  </ol>
+</nav>
+
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert" >
+   {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+<form class="row g-3 needs-validation" method="POST" action="/adduser" novalidate>
+
+<div class="col-md-6">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"  placeholder="Number Plate" name="numberplate">
+  <label for="floatingInput">Number Plate</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"  placeholder="Owner Name" name="ownername">
+  <label for="floatingInput">Owner Name</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"  placeholder="Car Model" name="carmodel">
+  <label for="floatingInput">Car Model</label>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput"  placeholder="Car Colour" name="carcolor">
+  <label for="floatingInput">Car Colour</label>
+</div>
+</div>
+
+<div class="col-12 d-grid">
+    <button class="btn btn-primary" type="submit">SUBMIT</button>
+
+</div>
+
+</form>
